@@ -27,9 +27,7 @@ def mainscene_2017(MapName):
 
     objects_world = ["videoscoach", "autodance", "timeline/moves/x360"]
     for object_world in objects_world:
-        os.makedirs(f"{output_folder_legacy}/audio", exist_ok=True)
-
-    os.makedirs(f"{output_folder_world}/{object_world}", exist_ok=True)
+        os.makedirs(f"{output_folder_world}/{object_world}", exist_ok=True)
 
     with open(f"{output_folder_cache}/audio/{mapname}.stape.ckd", "wb") as stape:
         # this is an empty jd17 tape 
