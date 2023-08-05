@@ -1,2 +1,7 @@
 # Mainscene_OldGen
-Main Scene Generator for Just Dance 2016 (Old-Gen) to the last Just Dance version supported on X360, Wii or PS3.
+The difference between the 3 files, are the paths thats making. 
+**Example**: mainscene_x360.py will do **cache/itf_cooked/x360**.
+
+# By Sen
+
+If you found this useful, dont mind leaving a star <3
