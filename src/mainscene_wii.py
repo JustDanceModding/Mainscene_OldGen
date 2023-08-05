@@ -21,11 +21,13 @@ def mainscene_2017(MapName):
     output_folder_cache = f"{mapname}_wii/cache/itf_cooked/wii/world/maps/{mapname}/"
     output_folder_legacy = f"{mapname}_wii/cache/itf_cooked/wii/cache/legacyconverteddata/{mapname}/"
     output_folder_world = f"{mapname}_wii/world/maps/{mapname}/"
-    objects_cache = ["audio", "autodance", "cinematics", "graph", "menuart/textures", "menuart/actors", "timeline/pictos", "videoscoach"]
+    objects_cache = ["audio", "cinematics", "autodance", "graph", "menuart/textures", "menuart/actors", "timeline/pictos", "videoscoach"]
     for object_cache in objects_cache:
         os.makedirs(f"{output_folder_cache}/{object_cache}", exist_ok=True)
+    
+    os.makedirs(f"{output_folder_legacy}/audio", exist_ok=True)
 
-    objects_world = ["videoscoach", "autodance", "timeline/moves/wii", "timeline/moves/wiiu"]
+    objects_world = ["videoscoach", "timeline/moves/wii", "timeline/moves/wiiu"]
     for object_world in objects_world:
         os.makedirs(f"{output_folder_world}/{object_world}", exist_ok=True)
 
@@ -331,7 +333,7 @@ def mainscene_2017(MapName):
         songdescact.write(b'\x00\x00\x00\x02\x00\x00\x00\x00\x00\x00\x00\x01\xE0\x7F\xCC\x3F')
 
 def main():
-    print("Welcome to the Mainscene Maker for OldGen by SilencerGuy1809!\nIf there are any problems, contact me on discord! silencerguy#1207\n\n")
+    print("Welcome to the Mainscene Maker for OldGen by Sen!\nIf there are any problems, contact me on discord! senmods\n\n")    
     MapName = input("Please Type in your MapName\n-> ")
     mainscene_2017(MapName)
     print(f"\n\nDone creating custom mainscene for: {MapName}!\nIf you will use would you mind giving credits? Its not obbligatory :)\n\nExiting in 4 Seconds...")
